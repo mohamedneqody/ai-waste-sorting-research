@@ -1,0 +1,23 @@
+# بيانات التدريب الكبيرة — تُنزَّل من مصادرها (انظر README)
+data/dataset-resized/
+data/dataset-resized.zip
+data/local_egypt/
+
+# نسخ احتياطية ومخططات عمل
+backup/
+docx_build/node_modules/
+docx_build/preview*/
+docx_build/preview2/
+docx_build/preview3/
+docx_build/package-lock.json
+
+# ملفات تشغيل مؤقتة
+prototype/server.log
+prototype/uploads/
+**/__pycache__/
+*.pyc
+
+# مكررات بأسماء لاتينية (النسخ النهائية بأسماء عربية)
+Waste_AI_Research.docx
+Waste_AI_Research.pdf
+data/__MACOSX/

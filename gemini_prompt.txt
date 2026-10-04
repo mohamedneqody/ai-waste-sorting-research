@@ -1,0 +1,3 @@
+Classify this photo of a waste item into exactly one of these categories:
+cardboard, glass, metal, paper, plastic, trash.
+Answer with ONLY the single category word, in lowercase, with no punctuation, no explanation, and no other text.

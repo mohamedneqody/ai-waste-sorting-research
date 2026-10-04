@@ -1,0 +1,113 @@
+{
+  "model": "MobileNetV2 (transfer learning, ImageNet-pretrained)",
+  "dataset": "TrashNet — 2527 images, 6 classes (cardboard 403, glass 501, metal 410, paper 594, plastic 482, trash 137)",
+  "split": {
+    "train": 1768,
+    "val": 379,
+    "test": 380,
+    "seed": 42
+  },
+  "epochs": 12,
+  "batch": 32,
+  "optimizer": "Adam lr=1e-4 cosine",
+  "device": "NVIDIA T1200 Laptop GPU",
+  "train_time_sec": 394.7,
+  "test_accuracy": 0.8921,
+  "per_class": {
+    "cardboard": {
+      "precision": 0.963,
+      "recall": 0.8667,
+      "f1": 0.9123,
+      "support": 60.0
+    },
+    "glass": {
+      "precision": 0.9054,
+      "recall": 0.8816,
+      "f1": 0.8933,
+      "support": 76.0
+    },
+    "metal": {
+      "precision": 0.8082,
+      "recall": 0.9516,
+      "f1": 0.8741,
+      "support": 62.0
+    },
+    "paper": {
+      "precision": 0.883,
+      "recall": 0.9326,
+      "f1": 0.9071,
+      "support": 89.0
+    },
+    "plastic": {
+      "precision": 0.9403,
+      "recall": 0.863,
+      "f1": 0.9,
+      "support": 73.0
+    },
+    "trash": {
+      "precision": 0.8333,
+      "recall": 0.75,
+      "f1": 0.7895,
+      "support": 20.0
+    }
+  },
+  "macro_f1": 0.8794,
+  "confusion_matrix": [
+    [
+      52,
+      1,
+      0,
+      7,
+      0,
+      0
+    ],
+    [
+      0,
+      67,
+      4,
+      1,
+      4,
+      0
+    ],
+    [
+      1,
+      2,
+      59,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      83,
+      0,
+      3
+    ],
+    [
+      0,
+      4,
+      5,
+      1,
+      63,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      2,
+      0,
+      15
+    ]
+  ],
+  "classes": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "run_date": "2026-10-04T18:02:31",
+  "dataset": "Web-Waste-Mini — 125 صورة ويب عامة مرخصة (Wikimedia Commons)، مقبولة بمراجعة موثقة",
+  "role": "المحور الثاني (اختبار تعميم خارجي على صور ويب) — منفصل عن الاختبار الميداني المحلي EG-Waste-Mini",
+  "manifest_source": "provenance/web_waste_manifest.csv (صفوف accepted فقط، SHA-256 متحقق)",
+  "n_images": 125,
+  "counts_per_class": {
+    "cardboard": 21,
+    "glass": 21,
+    "metal": 21,
+    "paper": 20,
+    "plastic": 22,
+    "trash": 20
+  },
+  "scene_type_counts": {
+    "crowded": 81,
+    "single": 44
+  },
+  "difficulty_counts": {
+    "normal": 111,
+    "transparent_hard": 14
+  },
+  "accuracy": 0.32,
+  "macro_f1": 0.2826,
+  "accuracy_by_scene_type": {
+    "crowded": 0.284,
+    "single": 0.3864
+  },
+  "accuracy_by_difficulty": {
+    "normal": 0.3333,
+    "transparent_hard": 0.2143
+  },
+  "per_class": {
+    "cardboard": {
+      "precision": 0.3448,
+      "recall": 0.4762,
+      "f1": 0.4,
+      "support": 21.0
+    },
+    "glass": {
+      "precision": 0.8,
+      "recall": 0.1905,
+      "f1": 0.3077,
+      "support": 21.0
+    },
+    "metal": {
+      "precision": 0.3158,
+      "recall": 0.2857,
+      "f1": 0.3,
+      "support": 21.0
+    },
+    "paper": {
+      "precision": 0.2456,
+      "recall": 0.7,
+      "f1": 0.3636,
+      "support": 20.0
+    },
+    "plastic": {
+      "precision": 0.4,
+      "recall": 0.2727,
+      "f1": 0.3243,
+      "support": 22.0
+    },
+    "trash": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 20.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      10,
+      0,
+      4,
+      7,
+      0,
+      0
+    ],
+    [
+      1,
+      4,
+      4,
+      6,
+      6,
+      0
+    ],
+    [
+      4,
+      0,
+      6,
+      11,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      1,
+      14,
+      1,
+      0
+    ],
+    [
+      5,
+      1,
+      3,
+      7,
+      6,
+      0
+    ],
+    [
+      5,
+      0,
+      1,
+      12,
+      2,
+      0
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ],
+  "device": "NVIDIA T1200 Laptop GPU",
+  "versions": {
+    "python": "3.14.0",
+    "torch": "2.14.0+cu126",
+    "torchvision": "0.29.0+cpu"
+  },
+  "timing_definition": {
+    "csv_inference_ms": "end-to-end محلي لكل صورة (قراءة+معالجة+forward) — لا شبكة",
+    "gpu_sync_note": "torch.cuda.synchronize() قبل وبعد كل قياس + بعد الإحماء",
+    "warmup_note": "3 تمريرات على أول صورة فقط (غير مقيسة ولا مستهلكة)",
+    "gpu_forward_only_avg_ms": 7.5,
+    "cpu_forward_only_avg_ms": 13.5,
+    "e2e_avg_ms": 29.9
+  },
+  "model_source": "models/mobilenetv2_trashnet_best.pt (النموذج المعتمد، لم يُعَد تدريبه)",
+  "internal_trashnet_reference": "Accuracy=89.21%, Macro F1=0.879 (دقة داخلية منفصلة — لا تخلط)",
+  "integrity_note": "لا تقييم جزئي: preflight كامل قبل الاستدلال وأي فشل يوقف كل شيء قبل الكتابة"
+}

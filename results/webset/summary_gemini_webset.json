@@ -1,0 +1,121 @@
+{
+  "test_date": "2026-10-04T20:07:10",
+  "dataset": "Web-Waste-Mini (accepted rows, SHA-verified)",
+  "model_requested": "gemini-flash-lite-latest",
+  "model_version_observed": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_file": "gemini_prompt.txt",
+  "prompt_text": "Classify this photo of a waste item into exactly one of these categories:\ncardboard, glass, metal, paper, plastic, trash.\nAnswer with ONLY the single category word, in lowercase, with no punctuation, no explanation, and no other text.",
+  "n_images_manifest": 125,
+  "n_success": 125,
+  "n_unparseable": 0,
+  "n_http_permanent": 0,
+  "n_technical_pending": 0,
+  "completeness": "complete",
+  "completeness_note": "المقاييس تُحسب فقط عند نجاح كل صور المجموعة — لا مقاييس جزئية",
+  "retry_policy": "تقني (شبكة/429/5xx) يُعاد حتى 12 بنفس الطلب مع تدوير المفاتيح؛ النجاح لا يُعاد؛ unparseable نهائي",
+  "n_api_keys_rotated": 4,
+  "key_rotation_note": "التدوير round-robin على المفاتيح يوزع الحمل فيبقى داخل حدود كل مفتاح مجاني مع سرعة أعلى — لا يتجاوز حصة أي مفتاح بمفرده",
+  "accuracy": 0.888,
+  "macro_f1": 0.8876,
+  "per_class": {
+    "cardboard": {
+      "precision": 0.7727,
+      "recall": 0.8095,
+      "f1": 0.7907,
+      "support": 21.0
+    },
+    "glass": {
+      "precision": 0.9091,
+      "recall": 0.9524,
+      "f1": 0.9302,
+      "support": 21.0
+    },
+    "metal": {
+      "precision": 0.9048,
+      "recall": 0.9048,
+      "f1": 0.9048,
+      "support": 21.0
+    },
+    "paper": {
+      "precision": 0.8947,
+      "recall": 0.85,
+      "f1": 0.8718,
+      "support": 20.0
+    },
+    "plastic": {
+      "precision": 0.913,
+      "recall": 0.9545,
+      "f1": 0.9333,
+      "support": 22.0
+    },
+    "trash": {
+      "precision": 0.9444,
+      "recall": 0.85,
+      "f1": 0.8947,
+      "support": 20.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      17,
+      0,
+      2,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      20,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      19,
+      0,
+      0,
+      1
+    ],
+    [
+      3,
+      0,
+      0,
+      17,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      21,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      1,
+      17
+    ]
+  ],
+  "timing_definition": "زمن الاستجابة السحابي الكلي شامل الشبكة — لا يقارن مباشرة بالزمن المحلي",
+  "cost_note": "الحساب المجاني — تكلفة التجربة = 0 جنيه؛ لا يُعمم على استخدام مدفوع",
+  "confusion_matrix_labels": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ],
+  "cloud_latency_avg_ms": 4530.3
+}
