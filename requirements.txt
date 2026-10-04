@@ -1,0 +1,9 @@
+torch
+torchvision
+scikit-learn
+matplotlib
+Pillow
+Flask
+numpy
+arabic-reshaper
+python-bidi

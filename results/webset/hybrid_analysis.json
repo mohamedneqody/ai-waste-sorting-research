@@ -1,0 +1,153 @@
+{
+  "method": "سياسة هجينة محسومة مسبقًا: ثقة MobileNet >= T تُقبل محليًا؛ وإلا تصعيد لـ Gemini واستخدام تنبؤه الحقيقي المسجل",
+  "data_source": "results/webset/predictions_webset.csv + predictions_gemini_webset.csv (نفس الـ125 صورة، بلا أي طلب جديد)",
+  "n_images": 125,
+  "mobile_alone": {
+    "accuracy": 0.32
+  },
+  "gemini_alone": {
+    "accuracy": 0.888,
+    "avg_latency_ms": 4530.3
+  },
+  "policy_thresholds": [
+    {
+      "threshold": 0.5,
+      "accepted_local": 80,
+      "escalated_to_gemini": 45,
+      "escalation_pct": 36.0,
+      "hybrid_accuracy": 0.552,
+      "gemini_calls": 45
+    },
+    {
+      "threshold": 0.55,
+      "accepted_local": 67,
+      "escalated_to_gemini": 58,
+      "escalation_pct": 46.4,
+      "hybrid_accuracy": 0.632,
+      "gemini_calls": 58
+    },
+    {
+      "threshold": 0.6,
+      "accepted_local": 62,
+      "escalated_to_gemini": 63,
+      "escalation_pct": 50.4,
+      "hybrid_accuracy": 0.664,
+      "gemini_calls": 63
+    },
+    {
+      "threshold": 0.65,
+      "accepted_local": 59,
+      "escalated_to_gemini": 66,
+      "escalation_pct": 52.8,
+      "hybrid_accuracy": 0.688,
+      "gemini_calls": 66
+    },
+    {
+      "threshold": 0.7,
+      "accepted_local": 52,
+      "escalated_to_gemini": 73,
+      "escalation_pct": 58.4,
+      "hybrid_accuracy": 0.72,
+      "gemini_calls": 73
+    },
+    {
+      "threshold": 0.75,
+      "accepted_local": 45,
+      "escalated_to_gemini": 80,
+      "escalation_pct": 64.0,
+      "hybrid_accuracy": 0.76,
+      "gemini_calls": 80
+    },
+    {
+      "threshold": 0.8,
+      "accepted_local": 36,
+      "escalated_to_gemini": 89,
+      "escalation_pct": 71.2,
+      "hybrid_accuracy": 0.776,
+      "gemini_calls": 89
+    },
+    {
+      "threshold": 0.85,
+      "accepted_local": 29,
+      "escalated_to_gemini": 96,
+      "escalation_pct": 76.8,
+      "hybrid_accuracy": 0.792,
+      "gemini_calls": 96
+    },
+    {
+      "threshold": 0.9,
+      "accepted_local": 23,
+      "escalated_to_gemini": 102,
+      "escalation_pct": 81.6,
+      "hybrid_accuracy": 0.816,
+      "gemini_calls": 102
+    },
+    {
+      "threshold": 0.95,
+      "accepted_local": 14,
+      "escalated_to_gemini": 111,
+      "escalation_pct": 88.8,
+      "hybrid_accuracy": 0.848,
+      "gemini_calls": 111
+    }
+  ],
+  "best_threshold": {
+    "threshold": 0.95,
+    "accepted_local": 14,
+    "escalated_to_gemini": 111,
+    "escalation_pct": 88.8,
+    "hybrid_accuracy": 0.848,
+    "gemini_calls": 111
+  },
+  "confidence_calibration": {
+    "mean_conf_when_correct": 0.719,
+    "mean_conf_when_wrong": 0.5971,
+    "bins": [
+      {
+        "bin": "0.50–0.70",
+        "n": 28,
+        "accuracy": 0.1786
+      },
+      {
+        "bin": "0.70–0.85",
+        "n": 23,
+        "accuracy": 0.3913
+      },
+      {
+        "bin": "0.85–0.95",
+        "n": 15,
+        "accuracy": 0.3333
+      },
+      {
+        "bin": "0.95–1.01",
+        "n": 14,
+        "accuracy": 0.6429
+      }
+    ]
+  },
+  "by_scene_at_best": {
+    "single": {
+      "n": 44,
+      "mn_alone_acc": 0.3864,
+      "hybrid_acc": 0.9091
+    },
+    "crowded": {
+      "n": 81,
+      "mn_alone_acc": 0.284,
+      "hybrid_acc": 0.8148
+    }
+  },
+  "by_difficulty_at_best": {
+    "normal": {
+      "n": 111,
+      "mn_alone_acc": 0.3333,
+      "hybrid_acc": 0.8468
+    },
+    "transparent_hard": {
+      "n": 14,
+      "mn_alone_acc": 0.2143,
+      "hybrid_acc": 0.8571
+    }
+  },
+  "honesty_note": "لا يمكن استبعاد ألفة صور ويب العامة من تدريب نموذج تجاري — التحفظ نفسه الخاص بمقارنة 5-3 ينطبق هنا"
+}

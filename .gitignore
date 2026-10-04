@@ -21,3 +21,6 @@ prototype/uploads/
 Waste_AI_Research.docx
 Waste_AI_Research.pdf
 data/__MACOSX/
+docx_build/build_tmp.docx
+docx_build/build_tmp.pdf
+review_web/blind/review_images/
