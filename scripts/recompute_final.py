@@ -39,6 +39,7 @@ if hasattr(sys.stdout, "reconfigure"):
 
 REVIEW_IDS = {f"R{i:03d}" for i in range(1, 126)}
 FEW_WARN = 10
+EXCLUDE_REASONS = {"not_clear_waste", "no_dominant_material", "outside_six_classes", "unusable_image"}
 
 
 def sha256_file(p: Path) -> str:
@@ -136,6 +137,9 @@ def validate_decisions(blind_path: Path):
                 continue
             if not reason:
                 problems.append(f"سطر {n} ({rid}): exclude=yes بدون exclude_reason إلزامي")
+                continue
+            if reason not in EXCLUDE_REASONS:
+                problems.append(f"سطر {n} ({rid}): exclude_reason خارج القائمة المحصورة ({reason!r}) — المسموح: not_clear_waste / no_dominant_material / outside_six_classes / unusable_image")
                 continue
             decisions[rid] = {"label": "", "excluded": True, "reason": reason}
         else:
