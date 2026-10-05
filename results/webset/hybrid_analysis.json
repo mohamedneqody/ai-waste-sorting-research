@@ -1,5 +1,5 @@
 {
-  "method": "سياسة هجينة محسومة مسبقًا: ثقة MobileNet >= T تُقبل محليًا؛ وإلا تصعيد لـ Gemini واستخدام تنبؤه الحقيقي المسجل",
+  "method": "تحليل استكشافي بعدي لعتبات التصعيد (فُحصت بعد رؤية النتائج على مجموعة الاختبار ذاتها): ثقة MobileNet >= T تُقبل محليًا؛ وإلا تصعيد لـ Gemini واستخدام تنبؤه الحقيقي المسجل",
   "data_source": "results/webset/predictions_webset.csv + predictions_gemini_webset.csv (نفس الـ125 صورة، بلا أي طلب جديد)",
   "n_images": 125,
   "mobile_alone": {
